@@ -1,0 +1,70 @@
+1. Univercity Topper.
+
+          STREAM COLLEGE_NAME  PERCENTAGE
+NAME                                     
+student37  Maths  PES College       99.71
+
+
+
+2. College_Toppers.
+
+                                     NAME  TOTAL_MARKS  PERCENTAGE
+COLLEGE                                                           
+BMRCI                            student4          491       98.20
+IISc                            student17          950       95.00
+PES College                     student37          698       99.71
+Jain College                    student74          398       99.50
+Horizon College of Engineering  student97          491       49.10
+Horizon College of Engineering  student91          491       49.10
+
+
+
+3. Stream Toppers.
+
+               STREAM                         COLLEGE  TOTAL_MARKS  PERCENTAGE
+NAME                                                                          
+student17         CSE                            IISc          950       95.00
+student56   Chemistry                     PES College          693       99.00
+student27  Electrical                            IISc          894       89.40
+student74   Geography                    Jain College          398       99.50
+student67     History                    Jain College          389       97.25
+student73     History                    Jain College          389       97.25
+student91        MBBS  Horizon College of Engineering          491       49.10
+student4         MBBS                           BMRCI          491       98.20
+student16        MECH                            IISc          910       91.00
+student37       Maths                     PES College          698       99.71
+student97        Mmed  Horizon College of Engineering          491       49.10
+student42     Physics                     PES College          563       80.43
+
+
+
+Que 4. Given bellow students got scholarship.
+
+              STREAM  COLLEGE_NAME  SCHOLARSHIP_ELIGIBILITY
+NAME                                                       
+student2        MBBS         BMRCI                     True
+student4        MBBS         BMRCI                     True
+student8        Mmed         BMRCI                     True
+student10       Mmed         BMRCI                     True
+student12       MECH          IISc                     True
+student15        CSE          IISc                     True
+student16       MECH          IISc                     True
+student17        CSE          IISc                     True
+student21        CSE          IISc                     True
+student35      Maths   PES College                     True
+student36      Maths   PES College                     True
+student37      Maths   PES College                     True
+student38      Maths   PES College                     True
+student56  Chemistry   PES College                     True
+student57  Chemistry   PES College                     True
+student60  Chemistry   PES College                     True
+student64    History  Jain College                     True
+student65    History  Jain College                     True
+student67    History  Jain College                     True
+student68    History  Jain College                     True
+student69    History  Jain College                     True
+student73    History  Jain College                     True
+student74  Geography  Jain College                     True
+
+
+

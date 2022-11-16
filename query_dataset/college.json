@@ -1,0 +1,6 @@
+{
+	"college_id" : "number",
+	"name" : "string",
+	"location" : "string",
+	"type" : "string"
+}

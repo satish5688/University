@@ -1,0 +1,10 @@
+{
+	"student_id" : "number",
+	"college_id" : "number",
+	"name" : "string",
+	"stream" : "string",
+	"admission_year" : "number",
+	"total_marks" : "number",
+	"percentage" : "number(4,2)",
+	"scholarship_eligibility" : "boolean"
+}

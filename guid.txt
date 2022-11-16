@@ -1,0 +1,73 @@
+Step 1:
+    Execute the following queries in your Snowflake UI:
+    CREATE DATABASE UNIVERSITY;
+    CREATE SCHEMA UNIVERSITY.SCHOLARSHIP_INFO;
+
+Step 2:
+    Download and place the json files shared in a folder named “query_dataset”.
+    Download and place the “university_data.xlsx” in a location.
+
+Step 3:
+    Create a config file named “config.cfg” that will store only your Snowflake credentials like below:
+
+    [SNOWFLAKE]
+    account=”xxxxxxx”
+    user=”xxxxx”
+    password=”xxxxxxx”
+    …other relevant information
+
+Step 4:
+    Create a python program (main.py) that will do the following:
+    1.	Take input of the following parameters:
+    a.	Function Type: -t as “create”
+    b.	Config File Path: -c as “<Complete path of your config file location>”
+    c.	Folder of JSON file: -d as “<Folder Path of the json files>”
+    2.	Read the json files from the folder and create tables in Snowflake (table name should be the same as json file name)
+
+Step 5:
+    Extend the program (main.py) that will do the following:
+    1.	Take input of the following parameters:
+    a.	Function Type: -t as “insert”
+    b.	Config File Path: -c as “<Complete path of your config file location>”
+    c.	Path of university_data excel: -d as “<File path of university_data.xlsx>”
+    2.	Read the excel file and check the sheet name at bottom and create a dynamic insert query from the data in the sheet and insert it into the same table as the sheet name.
+
+
+Step 6:
+    Extend the program (main.py) that will do the following:
+    1.	Take input of the following parameters:
+        a.	Function Type: -t as “fetch
+        b.	Config File Path: -c as ““<Complete path of your config file location>”
+        c.	Output File Path: -d as “Desired path of output text file”
+    2.	Create a python function that will take 2 inputs “total_student_marks”  and “college_type” and will return flag ‘TRUE’ or ‘FALSE’ based on the below criteria:
+    a.	Calculate percentage based on the following:
+    If college_type == “Medicine” then total_subject_marks = 500
+    If college_type == “Engineering” then total_subject_marks = 1000
+    If college_type == “Science” then total_subject_marks = 700
+    If college_type == “Humanities” then total_subject_marks = 400
+
+    Percentage logic: (total_student_marks/total_subject_marks)* 100
+
+    b.	Update the student table PERCENTAGE = <data from Python function> and SCHOLARSHIP_STATUS to TRUE for those students whose percentage is greater than 90%.
+    c.	Generate a TEXT report that will contain the answer to the following questions:
+
+        1.	Student Name, Stream, College Name of the University Topper (Student with Highest Percentage irrespective of college)
+        2.	Student Name, Stream, College Name for the topper of all the colleges (Student with Highest Percentage from each college)
+        3.	Student Name, Stream, College Name for the topper of each subject for each college.
+        4.	Rank of Colleges based on the average of percentages of the students.
+        5.	Rank of all students for each college for each stream.
+        6.	Student Name, Stream, College Name for all students who have received scholarships.
+
+
+Note:
+    1.	DO NOT USE connection parameters in python program directly.
+    2.	In Step 4 and 5 DO NOT hard code table names in the queries.
+    3.	Try to reuse as much functions as possible.
+    4.	Create Classes and Methods within them based on the type of operation they do like below:
+    a.	Snowflake_Class
+    Methods: create_table(), insert_data(), get_data()
+    b.	File_Operation_Class
+    Methods: read_file(), write_file()
+    c.	Helper_Class
+    Methods: percent_calc(), get_conn_info()  and any other functions you need.
+    5.	Use a single snowflake connection and cursor object for all the operations.
